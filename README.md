@@ -145,10 +145,10 @@ Property | Type | Possible values | Default | Description
 ## Credits
 This library is inspired by [`wenzhixin vue-auto-form`](https://github.com/wenzhixin/vue-auto-form)
 
-## LICENSE
+## License
 
 **NOTE:**
 This library is licensed under the [The MIT License](https://github.com/norx85/vue-autoform/blob/master/LICENSE).
 If you like my work you can **Star** this repository, thanks for your support.
 
-Giulio De giorgio
+Giulio De Giorgio <norx85gh@gmail.com>
