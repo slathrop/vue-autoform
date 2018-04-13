@@ -119,8 +119,8 @@ Property | Type | Possible values | Default | Description
 **step** | *Number* | > 0 | 1 | The step of a numeric field
 **rows** | *Number* | >= 1 | 1 | In a text field determines if is a text area and the number of rows
 **regEx** | *RegEx* | - | - | Used to validate a text field
-**prefix** | *RegEx* | - | - | Add a prefix text where possible
-**suffix** | *RegEx* | - | - | Add a prefix text where possible
+**prefix** | *String* | - | - | Add a prefix text where possible
+**suffix** | *String* | - | - | Add a prefix text where possible
 **options** | [*String*], [*Number*], [*Object*] | - | - | Array of options for a multiple type field
 **textProp** | *String* | - | - | When options are objects defines the property to be used as label
 **valueProp** | *String* | - | - | When options are objects defines the property to be used as value
