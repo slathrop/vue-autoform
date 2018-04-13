@@ -93,7 +93,7 @@ App.vue
 ### `<af-form />`
 ##### properties
 Property | Type | Possible values | Default | Description
---- | --- | --- | ---
+--- | --- | --- | --- | ---
 **theme** | *String* | vuetify, element-ui | vuetify | The theme used by the form
 **locale** | *String* | en_us, it_it, zh_cn | en_us | The locale used by the form
 **schema** | *[Schema]* | - | - | An array of Schema objects the defines the form fields
