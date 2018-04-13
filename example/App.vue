@@ -3,7 +3,7 @@
         <v-toolbar app fixed color="primary" dark>
             <v-toolbar-title>Auto Form Examples</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn flat dark href="https://github.com/norx85/vue-auto-form" target="_blank">
+            <v-btn flat dark href="https://github.com/norx85/vue-autoform" target="_blank">
                 Documentation
             </v-btn>
         </v-toolbar>
