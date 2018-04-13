@@ -1,0 +1,49 @@
+{
+  "name": "vue-autoform",
+  "version": "0.1.0",
+  "description": "A vue library to build automaticaly forms from a data schema",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production --config webpack.prod.js",
+    "start": "concurrently -k \"webpack --mode development --watch\" \"webpack-dev-server --mode development\""
+  },
+  "keywords": [
+    "vue",
+    "autoform",
+    "form",
+    "vuetify",
+    "bootstrap",
+    "bootstrap4",
+    "element-ui"
+  ],
+  "author": "Giulio De Giorgio",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.11",
+    "element-ui": "^2.3.3",
+    "file-loader": "^1.1.11",
+    "highlight.js": "^9.12.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "url-loader": "^1.0.1",
+    "vue-highlight-component": "~1.0.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "vuetify": "^1.0.13",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "moment": "^2.22.0",
+    "sprintf-js": "^1.1.1",
+    "vue": "^2.5.16"
+  }
+}
