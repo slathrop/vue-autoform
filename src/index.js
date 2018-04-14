@@ -1,3 +1,9 @@
-import AfForm from './AfForm.vue'
+import AfForm from './AfForm.vue';
 
-export default AfForm
+const AutoForm  = {
+    install(Vue, options) {
+        Vue.component(AfForm.name, AfForm);
+    }
+};
+
+export default AutoForm;

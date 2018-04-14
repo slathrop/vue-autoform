@@ -9,7 +9,7 @@ Supported themes (for now) are:
 
 ## To install
 ```
-npm i --save vue-autoform
+npm i --save @norx85/vue-autoform
 ```
 
 ## How it works
@@ -19,7 +19,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css';
+import AutoForm from '@norx85/vue-autoform';
 Vue.use(Vuetify);
+Vue.use(AutoForm);
 new Vue({
     el: '#app',
     components: { App },
@@ -34,10 +36,8 @@ App.vue
     <af-form v-model="formData" :schema="schema" locale="en_us" theme="vuetify" @submit="onSubmit"></auto-form>
 </template>
 <script>
-    import AfForm from 'vue-autoform'
     export default {
         name: 'app',
-        components : { AfForm },
         data () {
             return {
                 formData : {},
