@@ -159,10 +159,16 @@ This library is inspired by [`wenzhixin vue-auto-form`](https://github.com/wenzh
 ## License
 This library is licensed under the [The MIT License](https://github.com/norx85/vue-autoform/blob/master/LICENSE).
 
-If you like my work you can **Star** this repository or you can buy me a coffe.
+If you like my work you can **Star** this repository or you can buy me a coffe:
 
-<img src="btc.png" alt="btc-support" style="width: 100px; height : 100px"/>&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="eth.png" alt="eth-support" style="width: 100px; height : 100px"/>
+Bitcoin address
+
+<img src="btc.png" alt="btc-support"/>
+
+Ethereum address
+
+<img src="eth.png" alt="eth-support"/>
 
 Thanks for your support
+
 Giulio De Giorgio <norx85gh@gmail.com>
