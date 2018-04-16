@@ -56,6 +56,17 @@
                             name = 'AfObjectGroup';
                         }
                         break;
+                    case 'datetime':
+                        if(this.schema.inputType && this.schema.inputType === 'radio') {
+                            name = 'AfRadio';
+                        } else if(this.schema.inputType && this.schema.inputType === 'select') {
+                            name = 'AfSelect';
+                        } else if(this.schema.inputType && this.schema.inputType === 'checkbox') {
+                            name = 'AfCheckbox';
+                        } else {
+                            name = 'AfDateTime';
+                        }
+                        break;
                     case 'date':
                         if(this.schema.inputType && this.schema.inputType === 'radio') {
                             name = 'AfRadio';
@@ -65,6 +76,17 @@
                             name = 'AfCheckbox';
                         } else {
                             name = 'AfDate';
+                        }
+                        break;
+                    case 'time':
+                        if(this.schema.inputType && this.schema.inputType === 'radio') {
+                            name = 'AfRadio';
+                        } else if(this.schema.inputType && this.schema.inputType === 'select') {
+                            name = 'AfSelect';
+                        } else if(this.schema.inputType && this.schema.inputType === 'checkbox') {
+                            name = 'AfCheckbox';
+                        } else {
+                            name = 'AfTime';
                         }
                         break;
                     case 'number':

@@ -58,6 +58,10 @@
                         let text = item[this.itemText];
                         if(this.schema.type === 'date' && _.isDate(text)) {
                             moment.locale(this.momentLocale);
+                            text = moment(text).format("ll");
+                        }
+                        if(this.schema.type === 'datetime' && _.isDate(text)) {
+                            moment.locale(this.momentLocale);
                             text = moment(text).format("lll");
                         }
                         return {
@@ -66,9 +70,17 @@
                         }
                     }
 
-                    if(this.schema.type === 'date' || _.isDate(item)) {
+                    if(this.schema.type === 'datetime' || _.isDate(item)) {
                         moment.locale(this.momentLocale);
                         let text = moment(item).format("lll");
+                        return {
+                            text : text,
+                            value : item
+                        }
+                    }
+                    if(this.schema.type === 'date') {
+                        moment.locale(this.momentLocale);
+                        let text = moment(item).format("ll");
                         return {
                             text : text,
                             value : item

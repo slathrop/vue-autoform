@@ -69,8 +69,29 @@ const examples = [
             name : 'birthday',
             type: 'date',
             label: 'Your birthday',
-            min: '2016-01-01T00:00:00.000Z',
-            defaultValue: '2016-10-18T00:00:00.000Z'
+            min: '2018-01-01T00:00:00.000Z',
+            defaultValue: '2018-10-18T00:00:00.000Z'
+        }]
+    },
+    {
+        title: 'Datetime',
+        schema: [{
+            name : 'start',
+            type: 'datetime',
+            label: 'Starts at',
+            min: '2018-01-01T00:00:00.000Z',
+            defaultValue: '2018-04-16T22:30:00.000Z'
+        }]
+    },
+    {
+        title: 'Time',
+        schema: [{
+            name : 'start',
+            type: 'time',
+            label: 'Starts at',
+            min : '18:00',
+            max : '22:00',
+            defaultValue: '20:30'
         }]
     },
     {

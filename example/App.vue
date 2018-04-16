@@ -58,7 +58,6 @@
 
 </template>
 <script>
-    import AfForm from '../src'
     import examples from './examples'
     import Highlight from 'vue-highlight-component'
     import 'highlight.js/styles/railscasts.css'
@@ -66,10 +65,10 @@
     import en from 'element-ui/lib/locale/lang/en'
     import it from 'element-ui/lib/locale/lang/it'
     import cn from 'element-ui/lib/locale/lang/zh-CN'
-    elementUiLocale.use(en)
+    elementUiLocale.use(en);
     export default {
         name: 'app',
-        components : { AfForm, Highlight },
+        components : { Highlight },
         data () {
             return {
                 theme : "vuetify",

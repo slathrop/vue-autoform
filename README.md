@@ -3,7 +3,7 @@ A [Vue.js](https://vuejs.org/) library to automate form creation, with theming s
 
 Supported Vue.js version: >= 2.5
 
-Supported themes (for now) are:
+Supported ui themes (for now) are:
 * [Vuetify](https://vuetifyjs.com/en/) version >= 1
 * [Element-UI](http://element.eleme.io/#/en-US) version >= 2
 
@@ -11,7 +11,19 @@ Supported themes (for now) are:
 ```
 npm i --save @norx85/vue-autoform
 ```
-
+If you have problem importing this module with webpack it's probably caused by the '@' char of my scoped package, because Webpack try to resolve src folder.
+A workaround is to override '@' behavior in webpack `resolve.alias` config:
+```js
+module.exports = {
+    resolve: {
+        alias: {
+            // put this to solve scoped package resolution in node_modules
+            '@': resolve('src')
+        }
+    }
+    ...
+}
+```
 ## How it works
 app.js
 ```js
@@ -110,7 +122,7 @@ Event | Description
 Property | Type | Possible values | Default | Description
 --- | --- | --- | --- | ---
 **name** | *String* | - | - | Name of the field in submitted data
-**type** | *String* | string, number, boolean, date, object | - | Data type of the field
+**type** | *String* | string, number, boolean, date, datetime, time, object | - | Data type of the field
 **inputType** | *String* | html types in text field, other values are: radio, select, checkbox | - | Determines the type of input rendered
 **multiple** | *Boolean* | `true`, `false` | `false` | If `true` the field contains an array of the selected data type (if possible)
 **defaultValue** | *Any* | - | - | A default value for the field, must be in the corresponding data type
@@ -126,15 +138,14 @@ Property | Type | Possible values | Default | Description
 **valueProp** | *String* | - | - | When options are objects defines the property to be used as value
 **trueLabel** | *String* | - | based on locale | In a boolean field is the label used for the `true` option
 **falseLabel** | *String* | - | based on locale | In a boolean field is the label used for the `false` option
-**$** | *[]
+**$** | *[Schema]* | - | - | This property is array of `Schema`, required and used only when type is `object`. It defines the form fields of the represented object
 
 
 ## Code Example
 [source](https://github.com/norx85/vue-autoform/tree/master/example)
 
-## Roadmap
-* Datetime and time fields
-* File field
+## Roadmap to v1
+* GeoJSON fields
 * Working form validation
 * Passing custom class to fields
 * Passing custom properties to fields
@@ -146,9 +157,12 @@ Property | Type | Possible values | Default | Description
 This library is inspired by [`wenzhixin vue-auto-form`](https://github.com/wenzhixin/vue-auto-form)
 
 ## License
-
-**NOTE:**
 This library is licensed under the [The MIT License](https://github.com/norx85/vue-autoform/blob/master/LICENSE).
-If you like my work you can **Star** this repository, thanks for your support.
 
+If you like my work you can **Star** this repository or you can buy me a coffe.
+
+<img src="btc.png" alt="btc-support" style="width: 100px; height : 100px"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="eth.png" alt="eth-support" style="width: 100px; height : 100px"/>
+
+Thanks for your support
 Giulio De Giorgio <norx85gh@gmail.com>

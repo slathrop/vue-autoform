@@ -1,6 +1,6 @@
 {
   "name": "@norx85/vue-autoform",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A vue library to build automaticaly forms from a data schema",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "babel-preset-env": "^1.6.1",
     "concurrently": "^3.5.1",
     "css-loader": "^0.28.11",
-    "element-ui": "^2.3.3",
+    "element-ui": "^2.3.4",
     "file-loader": "^1.1.11",
     "highlight.js": "^9.12.0",
     "html-loader": "^0.5.5",

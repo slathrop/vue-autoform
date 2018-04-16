@@ -9,33 +9,27 @@
         <v-text-field
                 slot="activator"
                 :label="label"
-                v-model="dateFormatted"
-                prepend-icon="event"
+                :value="model"
+                prepend-icon="access_time"
                 readonly
         ></v-text-field>
-        <v-date-picker v-model="model" no-title scrollable :locale="locale" autosave
-                       :min="min"
-                       :max="max"
-                       @input="onInput"
-                       reactive
-                       :date-format="date => new Date(date).toLocaleDateString()"
-                       :formatted-value.sync="dateFormatted">
-        </v-date-picker>
+        <v-time-picker v-model="model" scrollable color="primary"
+                       format="24hr"
+                       @input="onInput">
+        </v-time-picker>
     </v-menu>
 </template>
 
 <script>
-    import moment from 'moment'
-    import Locale from '../../locales'
     export default {
         data() {
             return {
                 menu : false,
-                model : this.value
+                model : this.value,
             }
         },
         watch : {
-            value() {
+            value(newVal) {
                 this.model = this.value;
             }
         },
@@ -53,18 +47,11 @@
             }
         },
         computed: {
-            dateFormatted() {
-                moment.locale(this.momentLocale);
-                let date = moment(new Date(this.model));
-                return date.format(Locale[this.locale].dateFormat);
-            },
-            momentLocale() {
-                return this.locale ? this.locale.substring(0,2) : 'en';
-            },
             label() {
                 return this.schema.label || this.schema.name;
             },
             min() {
+                console.log("min", this.schema.min);
                 return this.schema.min || undefined
             },
             max() {
@@ -72,15 +59,18 @@
             },
             rules() {
                 return []
-            }
+            },
+
         },
         methods: {
             onInput (val) {
-                let date = new Date(val);
-                this.$emit('input', date.toJSON())
+                this.$emit('input', this.model)
+            },
+            formatDate(date) {
+                return new Date(date).toLocaleDateString()
             }
         },
-        mounted() {
+        beforeMount() {
             if(!this.value && this.schema.defaultValue) {
                 this.model = this.schema.defaultValue;
                 this.$emit('input', this.model)

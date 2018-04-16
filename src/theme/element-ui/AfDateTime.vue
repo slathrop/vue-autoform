@@ -4,8 +4,8 @@
         <el-date-picker
                 clearable
                 @change="onInput"
-                v-model="model"
-                type="date"
+                v-model="modelDate"
+                type="datetime"
                 :format="dateFormat"
                 :picker-options="pickerOptions">
         </el-date-picker>
@@ -43,6 +43,15 @@
             }
         },
         computed: {
+            modelDate : {
+                get() {
+                    return new Date(this.model);
+                },
+                set(newVal) {
+                    this.model = newVal.toJSON();
+                    this.$emit('input', this.model)
+                }
+            },
             label() {
                 return this.schema.label || this.schema.name;
             },
@@ -56,7 +65,7 @@
                 return []
             },
             dateFormat() {
-                return Locale[this.locale].elementUiDateFormat || 'yyyy/MM/dd'
+                return Locale[this.locale].elementUiDatetimeFormat || 'yyyy/MM/dd HH:mm'
             },
             pickerOptions() {
                 return {

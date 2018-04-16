@@ -1,7 +1,10 @@
 // Based on https://github.com/wenzhixin/vue-auto-form/blob/develop/src/locales/en-us.js
 
 export default {
-    dateFormat : 'MM/dd/yyyy',
+    dateFormat : 'MM/DD/YYYY',
+    datetimeFormat : 'MM/DD/YYYY, HH:mm',
+    elementUiDateFormat : 'MM/dd/yyyy',
+    elementUiDatetimeFormat : 'MM/dd/yyyy HH:mm',
     submit: 'Submit',
     selectOne: '(Select One)',
     yes: 'Yes',

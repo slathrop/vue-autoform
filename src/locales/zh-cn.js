@@ -1,7 +1,10 @@
 // Based on https://github.com/wenzhixin/vue-auto-form/blob/develop/src/locales/zh-cn.js
 
 export default {
-    dateFormat : 'yyyy/MM/dd',
+    dateFormat : 'YYYY/MM/DD',
+    datetimeFormat : 'YYYY/MM/DD, HH:mm',
+    elementUiDateFormat : 'yyyy/MM/dd',
+    elementUiDatetimeFormat : 'yyyy/MM/dd HH:mm',
     submit: '提交',
     selectOne: '(请选择一项)',
     yes: '是',

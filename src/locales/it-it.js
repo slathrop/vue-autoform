@@ -1,5 +1,8 @@
 export default {
-    dateFormat : 'dd/MM/yyyy',
+    dateFormat : 'DD/MM/YYYY',
+    datetimeFormat : 'DD/MM/YYYY, HH:mm',
+    elementUiDateFormat : 'dd/MM/yyyy',
+    elementUiDatetimeFormat : 'dd/MM/yyyy HH:mm',
     submit: 'Invia',
     selectOne: '(Selezionane Uno)',
     yes: 'Sì',
