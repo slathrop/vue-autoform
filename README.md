@@ -161,11 +161,15 @@ This library is licensed under the [The MIT License](https://github.com/norx85/v
 
 If you like my work you can **Star** this repository or you can buy me a coffe:
 
-Bitcoin address
+**My Bitcoin address**
+
+`1PSFzd1oZX4q6EK1rKV8qyVZMTGujdAUic`
 
 <img src="btc.png" alt="btc-support"/>
 
-Ethereum address
+**My Ethereum address**
+
+`0x22A1fce43f874EBa36fC5984C189Be04866BBA91`
 
 <img src="eth.png" alt="eth-support"/>
 
